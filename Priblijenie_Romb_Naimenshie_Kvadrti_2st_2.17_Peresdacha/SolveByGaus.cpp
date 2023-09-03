@@ -12,7 +12,7 @@
 
 using namespace std;
 
-//Здесь M[строка][столбец]
+//Здесь M[строка][столбец] 
 vector<double> solveEquations(vector<vector<double>>& A, vector<double>& B) {
     unsigned long n = A.size();
     vector<vector<double>> augmentedMatrix(n, vector<double>(n + 1));
@@ -54,9 +54,9 @@ vector<double> solveEquations(vector<vector<double>>& A, vector<double>& B) {
 
     // Обратный ход метода Гаусса
     vector<double> solution(n);
-    for (unsigned long i = n - 1; i >= 0; i--) {
+    for (long long i = n - 1; i >= 0; i--) {
         double sum = 0.0;
-        for (unsigned long j = i + 1; j < n; j++) {
+        for (long long j = i + 1; j < n; j++) {
             sum += augmentedMatrix[i][j] * solution[j];
         }
         solution[i] = (augmentedMatrix[i][n] - sum) / augmentedMatrix[i][i];

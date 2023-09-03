@@ -5,7 +5,7 @@
 //  Created by Arsenii Klevakin on 11.07.2023.
 //
 
-#ifndef SolveByGaus
+#ifndef SolveByGaus5
 #define SolveByGaus
 
 #include <stdio.h>

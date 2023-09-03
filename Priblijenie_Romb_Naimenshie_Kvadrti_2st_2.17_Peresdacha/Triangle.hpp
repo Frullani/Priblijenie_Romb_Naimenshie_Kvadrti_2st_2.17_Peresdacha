@@ -33,6 +33,8 @@ public:
     //Список P_i
     vector<Point> P;
     
+    vector<double> alphas;
+    
     //Вычисление какой-то площади по трем точкам
     double computeSquare(Point A, Point B, Point C);
     //Вычисление и присваение площади данного треугольника
@@ -68,6 +70,11 @@ public:
     
     //Интреполирующая функция
     double Pf(Point XY);
+    
+    void computeAlphas(int deepth);
+    
+    //Интреполирующая функция по методу наименьших квадратов
+    double mnkPf(Point XY);
 };
 
 //Случайном образом генерирует n точек внутри треугольника
@@ -81,5 +88,11 @@ double computeIntergralOnTriagle(Triangle T, int accuracy);
 
 //Рекурсивно дробит треугольники на маленькие, делая разрезы по средим линиям
 vector<Triangle> splitTriangle(Triangle T, int depth);
+
+//Функции нужные для нахождения alphas 1-10 внтури системы
+double computeLeftIntegral(Triangle T, int i, int j, int deepth);
+double computeRightIntegral(Triangle T, int i, int deepth);
+
+//Две функции вычисляющие правый и 
 
 #endif /* Triangle_hpp */

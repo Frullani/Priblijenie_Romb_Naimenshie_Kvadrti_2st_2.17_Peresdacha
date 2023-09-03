@@ -18,6 +18,7 @@
 #include "Function.hpp"
 #include "Point.hpp"
 #include "Triangle.hpp"
+#include "SolveByGaus.hpp"
 
 using namespace std;
 
@@ -50,6 +51,24 @@ vector<Point> MakeNet(double x1, double y1, double x2, double y2, int n){
     return Net;
 }
 
+vector<vector<Point>> MakeNet2(double x1, double y1, double x2, double y2, int n){
+    vector<vector<Point>> Net;
+    double hx, hy;
+    hx=(x2-x1)/n; //шаг по x
+    hy=(y1-y2)/n; //шаг по y
+    for(int i=0; i<=n; i++){
+        vector<Point> help;
+        for(int j=0; j<=n; j++){
+            Point P;
+            P.x=x1+j*hx;
+            P.y=y2+i*hy;
+            help.push_back(P);
+        }
+        Net.push_back(help);
+    }
+    return Net;
+}
+
 double findMin(double a, double b, double c, double d) {
     // Находим минимум между a и b
     double minAB = (a < b) ? a : b;
@@ -70,21 +89,12 @@ double findMax(double a, double b, double c, double d) {
     return overallMax;
 }
 
-//Запись точек в файл
-void writePointsToFile(vector<Point> Points, const string& filename){
-    ofstream file(filename);
-    for(int i=0; i<Points.size(); i++){
-        file << Points[i].x << " " << Points[i].y << " " << Points[i].z << endl;
-    }
-    cout << Points.size() << " Points writen to file" << endl;
-}
-
 
 int main() {
     Point r1(0, -7), r2(-10, 0), r3(0, 7), r4(10, 0);
-    int TriangulationSize=2; //4 это 256 треугольников Рекомендуется
-    int NetSize=150;
-    int IntegralAcuracy=1000;
+    int TriangulationSize=3; //2 это 256 треугольников Рекомендуется
+    int NetSize=200;
+    int IntegralAcuracy=3;
     
     if(isThisRombus(r1, r2, r3, r4)){
         cout << "Okay the input is Rombus" << endl;
@@ -107,8 +117,24 @@ int main() {
     //Создаем сетку покрывающую ромб
     Point RectangleLeftTop(findMin(r1.x, r2.x, r3.x, r4.x), findMax(r1.y, r2.y, r3.y, r4.y));
     Point RectangleRightBottomn(findMax(r1.x, r2.x, r3.x, r4.x), findMin(r1.y, r2.y, r3.y, r4.y));
-    vector<Point> Net = MakeNet(RectangleLeftTop.x, RectangleLeftTop.y, RectangleRightBottomn.x,
-                                RectangleRightBottomn.y, NetSize);
+    //vector<Point> Net = MakeNet(RectangleLeftTop.x, RectangleLeftTop.y, RectangleRightBottomn.x, RectangleRightBottomn.y, NetSize);
+    
+    vector<Point> Net;
+    vector<vector<Point>> Net2;
+    Net2 = MakeNet2(RectangleLeftTop.x, RectangleLeftTop.y, RectangleRightBottomn.x,
+                   RectangleRightBottomn.y, NetSize);
+    Net2 = colorizeNet(Net2);
+    for(int i=0; i<Net2.size(); i++){
+        for(int j=0; j<Net2[i].size(); j++){
+            Point P=Net2[i][j];
+            Net.push_back(P);
+        }
+    }
+    
+    
+    
+    
+    
     
     //Находим для каждой точки треугольник, которому принадлежит точка
     for(int i=0; i<Net.size(); i++){
@@ -129,6 +155,10 @@ int main() {
         Triangulation[i].computeP1_10();
     }
     
+    for(int i=0; i<Triangulation.size(); i++){
+        Triangulation[i].computeAlphas(IntegralAcuracy);
+    }
+    
     cout << "Treagulation containing " << Triangulation.size() << " triangles is ready" << endl;
     
     //Вычисляем интерпалиционные значения через Pf
@@ -140,11 +170,11 @@ int main() {
             for(int k=1; k<=10; k++){
                 //XY.z+=Triangulation[i].computeFi(k, XY)*alphas[k];
             }
-            XY.z=Triangulation[i].Pf(XY);
+            XY.z=Triangulation[i].mnkPf(XY);
             AproxPoints.push_back(XY);
         }
     }
-    
+    AproxPoints = colorazePlus(AproxPoints);
     //Вычисляем реальные значения
     vector<Point> RealPoints;
     
@@ -158,6 +188,14 @@ int main() {
     
     writePointsToFile(AproxPoints, "aprox_points.txt");
     writePointsToFile(RealPoints, "real_points.txt");
+    
+    double maxz=AproxPoints[0].z, minz=AproxPoints[0].z;
+    for(int i=0; i<AproxPoints.size(); i++){
+        if(AproxPoints[i].z>maxz) maxz=AproxPoints[i].z;
+        if(AproxPoints[i].z<maxz) minz=AproxPoints[i].z;
+    }
+    cout << "maxz=" << maxz <<" minz=" << minz << endl;
    
+    
     return 0;
 }

@@ -3,4 +3,484 @@
    uuid = "D18D7B77-593D-47CD-B49A-885FAAEAEF47"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "22A91A5A-C4C8-4D0D-ADBE-FA1202F69B1D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/main.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "main()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6D6E73DA-DE90-418C-8D7A-893367B687E9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/main.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "main()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8B976B3B-EA8F-4D3A-BE64-6585BD32AE7E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Point.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "Point"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EB674590-11E5-482B-B197-D46AB18069AF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/SolveByGaus.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "solveEquations(A, B)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FF0EA352-4C7D-4369-BAF9-70E266EEB60A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/SolveByGaus.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "solveEquations(A, B)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D0F09DCA-EA3A-4E3A-9005-AC21FD3982BB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Triangle.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "288"
+            endingLineNumber = "288"
+            landmarkName = "computeLeftIntegral(T, i, j, deepth)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3E799983-F216-44E7-93AD-349F8AAEBF3C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Triangle.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "334"
+            endingLineNumber = "334"
+            landmarkName = "Triangle::computeAlphas(depth)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "96EC80A9-CD11-4905-9EDF-5F626E062715"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Triangle.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "339"
+            endingLineNumber = "339"
+            landmarkName = "Triangle::computeAlphas(depth)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "96EC80A9-CD11-4905-9EDF-5F626E062715 - fb8ccd485aded15b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Triangle::computeAlphas(int)"
+                  moduleName = "Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arsenii/Documents/C_progs/Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Triangle.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "338"
+                  endingLineNumber = "338"
+                  offsetFromSymbolStart = "588">
+               </Location>
+               <Location
+                  uuid = "96EC80A9-CD11-4905-9EDF-5F626E062715 - fb8ccd485aded0ba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Triangle::computeAlphas(int)"
+                  moduleName = "Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arsenii/Documents/C_progs/Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Triangle.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "339"
+                  endingLineNumber = "339"
+                  offsetFromSymbolStart = "588">
+               </Location>
+               <Location
+                  uuid = "96EC80A9-CD11-4905-9EDF-5F626E062715 - fb8ccd485aded095"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Triangle::computeAlphas(int)"
+                  moduleName = "Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arsenii/Documents/C_progs/Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Triangle.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "340"
+                  endingLineNumber = "340"
+                  offsetFromSymbolStart = "588">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2EC0C6BA-5B52-49D8-A066-24A94B0AEC7E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Triangle.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "316"
+            endingLineNumber = "316"
+            landmarkName = "computeRightIntegral(T, i, deepth)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "2EC0C6BA-5B52-49D8-A066-24A94B0AEC7E - 4dade40750e6853b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "computeRightIntegral(Triangle, int, int)"
+                  moduleName = "Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arsenii/Documents/C_progs/Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Triangle.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "316"
+                  endingLineNumber = "316"
+                  offsetFromSymbolStart = "648">
+               </Location>
+               <Location
+                  uuid = "2EC0C6BA-5B52-49D8-A066-24A94B0AEC7E - 4dade40750e6855a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "computeRightIntegral(Triangle, int, int)"
+                  moduleName = "Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arsenii/Documents/C_progs/Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Triangle.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "317"
+                  endingLineNumber = "317"
+                  offsetFromSymbolStart = "675">
+               </Location>
+               <Location
+                  uuid = "2EC0C6BA-5B52-49D8-A066-24A94B0AEC7E - 4dade40750e6855a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "computeRightIntegral(Triangle, int, int)"
+                  moduleName = "Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arsenii/Documents/C_progs/Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Triangle.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "317"
+                  endingLineNumber = "317"
+                  offsetFromSymbolStart = "648">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F5B975B7-43B4-4020-BBD6-A1751A4F4E07"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Triangle.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "317"
+            endingLineNumber = "317"
+            landmarkName = "computeRightIntegral(T, i, deepth)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "93D89CB8-ECCD-4D6A-8A43-EDBD6315B95F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Triangle.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "313"
+            endingLineNumber = "313"
+            landmarkName = "computeRightIntegral(T, i, deepth)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "93D89CB8-ECCD-4D6A-8A43-EDBD6315B95F - 4dade40750e686a6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "computeRightIntegral(Triangle, int, int)"
+                  moduleName = "Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arsenii/Documents/C_progs/Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Triangle.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "313"
+                  endingLineNumber = "313"
+                  offsetFromSymbolStart = "416">
+               </Location>
+               <Location
+                  uuid = "93D89CB8-ECCD-4D6A-8A43-EDBD6315B95F - 4dade40750e686a6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "computeRightIntegral(Triangle, int, int)"
+                  moduleName = "Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arsenii/Documents/C_progs/Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Triangle.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "313"
+                  endingLineNumber = "313"
+                  offsetFromSymbolStart = "413">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B2A88E44-8B4C-4290-B53F-27AA1B19C02E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Triangle.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "312"
+            endingLineNumber = "312"
+            landmarkName = "computeRightIntegral(T, i, deepth)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "350D0C58-234C-4149-9BF2-B94194C21130"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Triangle.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "314"
+            endingLineNumber = "314"
+            landmarkName = "computeRightIntegral(T, i, deepth)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EE4E918A-2C12-40A1-8912-4A6CE3737E20"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Point.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "colorazePlus(Points)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C056FBD7-6387-471E-86C2-62152A2F0F68"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Point.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "colorazePlus(Points)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "76FBE904-CA6D-42A9-9D92-3DA3590F6691"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Point.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "colorazePlus(Points)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A19F8105-B509-4C50-ACC6-773DE316A0EB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Point.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "colorazePlus(Points)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FDC4BFA7-664B-4A21-8FB6-5696604F68B3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Point.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "colorazePlus(Points)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7568C5F4-F03B-4819-B9BD-3CAF00E7A1CF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Point.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "colorazePlus(Points)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2E28FCEC-922A-4825-81D5-0BC5B2E11B76"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Point.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "colorazePlus(Points)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "2E28FCEC-922A-4825-81D5-0BC5B2E11B76 - a1c68d2b49708f82"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "colorazePlus(std::__1::vector&lt;Point, std::__1::allocator&lt;Point&gt; &gt;)"
+                  moduleName = "Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arsenii/Documents/C_progs/Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Point.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "362">
+               </Location>
+               <Location
+                  uuid = "2E28FCEC-922A-4825-81D5-0BC5B2E11B76 - a1c68d2b49708fe1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "colorazePlus(std::__1::vector&lt;Point, std::__1::allocator&lt;Point&gt; &gt;)"
+                  moduleName = "Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arsenii/Documents/C_progs/Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Priblijenie_Romb_Naimenshie_Kvadrti_2st_2.17_Peresdacha/Point.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "371">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

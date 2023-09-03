@@ -11,11 +11,18 @@
 #include "Function.hpp"
 #include <stdio.h>
 #include <math.h>
+#include <fstream>
+#include <vector>
+#include <iostream>
+#include "SolveByGaus.hpp"
+
+using namespace std;
 
 class Point{
 public:
     double x, y;
     double z;
+    double color;
     
     Point(){};
     
@@ -28,4 +35,10 @@ public:
 double computeDistance(Point A, Point B);
 double fn(Point A);
 
+//Запись точек в файл
+void writePointsToFile(vector<Point> Points, const string& filename);
+
+//Раскрашивание сетки
+vector<vector<Point>> colorizeNet(vector<vector<Point>> Net);
+vector<Point> colorazePlus(vector<Point> Points);
 #endif /* Point_hpp */

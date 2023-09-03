@@ -282,3 +282,68 @@ vector<Triangle> splitTriangle(Triangle T, int depth){
     }
     return Triangles;
 }
+
+
+double computeLeftIntegral(Triangle T, int i, int j, int deepth){
+    vector<Triangle> Triangulation = splitTriangle(T, deepth);
+    for(int t=0; t<Triangulation.size(); t++){
+        Triangulation[t].computeCenterofMass();
+        Point C=Triangulation[t].centerOfMass;
+        Triangulation[t].centerOfMass.z=T.computeFi(i, C)*T.computeFi(j, C);
+        
+        Triangulation[t].computeSquare();
+    }
+    
+    double Integral=0;
+    
+    for(int t=0; t<Triangulation.size(); t++){
+        Integral += Triangulation[t].square*Triangulation[t].centerOfMass.z;
+    }
+    
+    return Integral;
+}
+
+double computeRightIntegral(Triangle T, int i, int deepth){
+    vector<Triangle> Triangulation = splitTriangle(T, deepth);
+    for(int t=0; t<Triangulation.size(); t++){
+        Triangulation[t].computeCenterofMass();
+        Point C=Triangulation[t].centerOfMass;
+        //cout << T.isPointInside(C) << endl;
+        Triangulation[t].centerOfMass.z=fn(C)*T.computeFi(i, C);
+        //cout << T.computeFi(i, C) << endl;
+        Triangulation[t].computeSquare();
+    }
+    
+    double Integral=0;
+    
+    for(int t=0; t<Triangulation.size(); t++){
+        Integral += Triangulation[t].square*Triangulation[t].centerOfMass.z;
+    }
+    
+    return Integral;
+
+}
+
+void Triangle::computeAlphas(int depth){
+    vector<vector<double>> A(10, vector<double>(10, 0.0));
+    for(int i=0; i<=9; i++){
+        for(int j=0; j<=9; j++){
+            A[i][j]=computeLeftIntegral(*this, i+1, j+1, depth);
+        }
+    }
+    
+    vector<double> B(10);
+    for(int i=0; i<=9; i++){
+        B[i]=computeRightIntegral(*this, i+1, depth);
+    }
+    
+    alphas=solveEquations(A, B);
+}
+
+double Triangle::mnkPf(Point XY){
+    double r=0;
+    for(int i=0; i<=9; i++){
+        r+=alphas[i]*computeFi(i+1, XY);
+    }
+    return r;
+}
