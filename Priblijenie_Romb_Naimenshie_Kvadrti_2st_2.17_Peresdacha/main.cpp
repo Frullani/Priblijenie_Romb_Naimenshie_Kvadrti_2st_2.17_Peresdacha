@@ -92,8 +92,8 @@ double findMax(double a, double b, double c, double d) {
 
 int main() {
     Point r1(0, -7), r2(-10, 0), r3(0, 7), r4(10, 0);
-    int TriangulationSize=3; //2 это 256 треугольников Рекомендуется
-    int NetSize=200;
+    int TriangulationSize=3;
+    int NetSize=150;
     int IntegralAcuracy=3;
     
     if(isThisRombus(r1, r2, r3, r4)){
@@ -121,20 +121,19 @@ int main() {
     
     vector<Point> Net;
     vector<vector<Point>> Net2;
+    
     Net2 = MakeNet2(RectangleLeftTop.x, RectangleLeftTop.y, RectangleRightBottomn.x,
                    RectangleRightBottomn.y, NetSize);
-    Net2 = colorizeNet(Net2);
+    
+    //Triangulation = splitTo90Triangles(RectangleLeftTop.x, RectangleLeftTop.y, RectangleRightBottomn.x, RectangleRightBottomn.y, TriangulationSize, RombPart1, RombPart2);
+    
+    //Для удобства преобразую двухмерную сетку в одномерную
     for(int i=0; i<Net2.size(); i++){
         for(int j=0; j<Net2[i].size(); j++){
             Point P=Net2[i][j];
             Net.push_back(P);
         }
     }
-    
-    
-    
-    
-    
     
     //Находим для каждой точки треугольник, которому принадлежит точка
     for(int i=0; i<Net.size(); i++){
@@ -152,9 +151,10 @@ int main() {
         Triangulation[i].v1.z=fn(Triangulation[i].v1);
         Triangulation[i].v2.z=fn(Triangulation[i].v2);
         Triangulation[i].v3.z=fn(Triangulation[i].v3);
-        Triangulation[i].computeP1_10();
+        Triangulation[i].computeP1_6();
     }
     
+    //Для каждого треугольника вычисляю альфы
     for(int i=0; i<Triangulation.size(); i++){
         Triangulation[i].computeAlphas(IntegralAcuracy);
     }
@@ -174,7 +174,9 @@ int main() {
             AproxPoints.push_back(XY);
         }
     }
+    //красим точки
     AproxPoints = colorazePlus(AproxPoints);
+    
     //Вычисляем реальные значения
     vector<Point> RealPoints;
     
@@ -192,7 +194,7 @@ int main() {
     double maxz=AproxPoints[0].z, minz=AproxPoints[0].z;
     for(int i=0; i<AproxPoints.size(); i++){
         if(AproxPoints[i].z>maxz) maxz=AproxPoints[i].z;
-        if(AproxPoints[i].z<maxz) minz=AproxPoints[i].z;
+        if(AproxPoints[i].z<minz) minz=AproxPoints[i].z;
     }
     cout << "maxz=" << maxz <<" minz=" << minz << endl;
    

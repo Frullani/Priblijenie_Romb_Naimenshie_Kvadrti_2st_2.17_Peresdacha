@@ -51,10 +51,12 @@ public:
     bool isPointInside(Point A);
     
     //Служебная формула для вычисления Pi
-    Point computeFormula(int k, int l, int s, vector<double> x, vector<double> y);
+    //Point computeFormula(int k, int l, int s, vector<double> x, vector<double> y);
+    Point computeFormula(int k, int l, vector<double> x, vector<double> y);
     
     //Вычисление и присваение данному треугольнику Pi
     void computeP1_10();
+    void computeP1_6();
     
     //ДАЛЕЕ ИДУТ ФУНКЦИИ НУЖНЫЕ ДЛЯ МНОГОМЕРНОЙ ИНТРЕРПОЛЯЦИИ СТЕПЕНИ 2
     
@@ -62,7 +64,7 @@ public:
     
     double computePsi(int i, Point XY);
     
-    double multiply3Psi(int a, int b, int c, Point XY);
+    double multiply2Psi(int a, int b, Point XY);
     
     double computeNu(int i, Point XY);
     
@@ -93,6 +95,7 @@ vector<Triangle> splitTriangle(Triangle T, int depth);
 double computeLeftIntegral(Triangle T, int i, int j, int deepth);
 double computeRightIntegral(Triangle T, int i, int deepth);
 
-//Две функции вычисляющие правый и 
+//Функции создающие прямоугольную триангуляцию
+vector<Triangle> splitTo90Triangles(double x1, double y1, double x2, double y2, int n, Triangle M,  Triangle N);
 
 #endif /* Triangle_hpp */

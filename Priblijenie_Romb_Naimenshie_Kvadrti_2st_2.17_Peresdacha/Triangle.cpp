@@ -60,14 +60,15 @@ bool Triangle::isPointInside(Point A){
     else return true;
 }
 
-Point Triangle::computeFormula(int k, int l, int s, vector<double> x, vector<double> y){
+
+Point Triangle::computeFormula(int k, int l, vector<double> x, vector<double> y){
     Point A;
-    A.x=((3-s)*x[k]+s*x[l])/3;
-    A.y=((3-s)*y[k]+s*y[l])/3;
+    A.x=(x[k]+x[l])/2;
+    A.y=(y[k]+y[l])/2;
     return A;
 }
 
-void Triangle::computeP1_10() {
+void Triangle::computeP1_6(){
     Point zero(0, 0, 0);
     P.push_back(zero);
     
@@ -79,18 +80,9 @@ void Triangle::computeP1_10() {
     x.push_back(0); x.push_back(v1.x); x.push_back(v2.x); x.push_back(v3.x);
     y.push_back(0); y.push_back(v1.y); y.push_back(v2.y); y.push_back(v3.y);
     
-    P.push_back(computeFormula(1, 2, 1, x, y));
-    P.push_back(computeFormula(1, 2, 2, x, y));
-    P.push_back(computeFormula(2, 3, 1, x, y));
-    P.push_back(computeFormula(2, 3, 2, x, y));
-    P.push_back(computeFormula(1, 3, 1, x, y));
-    P.push_back(computeFormula(1, 3, 2, x, y));
-    
-    // Вычисление центра тяжести
-    double x10 = (v1.x + v2.x + v3.x) / 3.0;
-    double y10 = (v1.y + v2.y + v3.y) / 3.0;
-    Point center(x10, y10, 0); // Создание вершины центра тяжести
-    P.push_back(center); // Добавляем вершину центра тяжести в конец вектора P
+    P.push_back(computeFormula(1, 2, x, y));
+    P.push_back(computeFormula(2, 3, x, y));
+    P.push_back(computeFormula(1, 3, x, y));
 }
 
 double Triangle::computeL(Point A, Point B, Point XY){
@@ -99,6 +91,7 @@ double Triangle::computeL(Point A, Point B, Point XY){
     double x=XY.x, y=XY.y;
     return (x-u1)*(v2-v1)-(y-v1)*(u2-u1);
 }
+
 
 double Triangle::computePsi(int i, Point XY){
     switch (i) {
@@ -112,22 +105,13 @@ double Triangle::computePsi(int i, Point XY){
             return computeL(P[1], P[2], XY);
             break;
         case 4:
-            return computeL(P[4], P[8], XY);
+            return computeL(P[4], P[6], XY);
             break;
         case 5:
-            return computeL(P[5], P[9], XY);
+            return computeL(P[4], P[5], XY);
             break;
         case 6:
             return computeL(P[5], P[6], XY);
-            break;
-        case 7:
-            return computeL(P[4], P[7], XY);
-            break;
-        case 8:
-            return computeL(P[7], P[9], XY);
-            break;
-        case 9:
-            return computeL(P[6], P[8], XY);
             break;
         default:
             return 0;
@@ -135,41 +119,29 @@ double Triangle::computePsi(int i, Point XY){
     }
 }
 
-double Triangle::multiply3Psi(int a, int b, int c, Point XY){
-    return computePsi(a, XY)*computePsi(b, XY)*computePsi(c, XY);
+double Triangle::multiply2Psi(int a, int b, Point XY){
+    return computePsi(a, XY)*computePsi(b, XY);
 }
 
 double Triangle::computeNu(int i, Point XY){
     switch (i) {
         case 1:
-            return multiply3Psi(1, 4, 5, XY);
+            return multiply2Psi(1, 4, XY);
             break;
         case 2:
-            return multiply3Psi(2, 6, 7, XY);
+            return multiply2Psi(2, 5, XY);
             break;
         case 3:
-            return multiply3Psi(3, 8, 9, XY);
+            return multiply2Psi(3, 6, XY);
             break;
         case 4:
-            return multiply3Psi(1, 2, 5, XY);
+            return multiply2Psi(1, 2, XY);
             break;
         case 5:
-            return multiply3Psi(1, 2, 7, XY);
+            return multiply2Psi(2, 3, XY);
             break;
         case 6:
-            return multiply3Psi(2, 3, 7, XY);
-            break;
-        case 7:
-            return multiply3Psi(2, 3, 9, XY);
-            break;
-        case 8:
-            return multiply3Psi(1, 3, 5, XY);
-            break;
-        case 9:
-            return multiply3Psi(1, 3, 9, XY);
-            break;
-        case 10:
-            return multiply3Psi(1, 2, 3, XY);
+            return multiply2Psi(1, 3, XY);
             break;
         default:
             return 0;
@@ -325,15 +297,15 @@ double computeRightIntegral(Triangle T, int i, int deepth){
 }
 
 void Triangle::computeAlphas(int depth){
-    vector<vector<double>> A(10, vector<double>(10, 0.0));
-    for(int i=0; i<=9; i++){
-        for(int j=0; j<=9; j++){
+    vector<vector<double>> A(6, vector<double>(6, 0.0));
+    for(int i=0; i<=5; i++){
+        for(int j=0; j<=5; j++){
             A[i][j]=computeLeftIntegral(*this, i+1, j+1, depth);
         }
     }
     
-    vector<double> B(10);
-    for(int i=0; i<=9; i++){
+    vector<double> B(6);
+    for(int i=0; i<=5; i++){
         B[i]=computeRightIntegral(*this, i+1, depth);
     }
     
@@ -342,8 +314,55 @@ void Triangle::computeAlphas(int depth){
 
 double Triangle::mnkPf(Point XY){
     double r=0;
-    for(int i=0; i<=9; i++){
+    for(int i=0; i<=5; i++){
         r+=alphas[i]*computeFi(i+1, XY);
     }
     return r;
+}
+
+
+vector<Triangle> splitTo90Triangles(double x1, double y1, double x2, double y2, int n, Triangle M,  Triangle N){
+    vector<vector<Point>> Net;
+    double hx, hy;
+    hx=(x2-x1)/n; //шаг по x
+    hy=(y1-y2)/n; //шаг по y
+    for(int i=0; i<=n; i++){
+        vector<Point> help;
+        for(int j=0; j<=n; j++){
+            Point P;
+            P.x=x1+j*hx;
+            P.y=y2+i*hy;
+            help.push_back(P);
+        }
+        Net.push_back(help);
+    }
+    
+    vector<Triangle> Triangles;
+    for(int i=0; i<Net.size()-1; i++){
+        for(int j=0; j<Net[i].size()-1; j++){
+            Point A = Net[i][j];
+            Point B = Net[i+1][j];
+            Point C = Net[i][j+1];
+            Point D = Net[i+1][j+1];
+            Triangle T1(A,B,C);
+            Triangle T2(B,C,D);
+            T1.computeCenterofMass();
+            T2.computeCenterofMass();
+            Triangles.push_back(T1);
+            Triangles.push_back(T2);
+        }
+    }
+    
+    vector<Triangle> Triangulation;
+    
+    for(int i=0; i<Triangles.size(); i++){
+        if(M.isPointInside(Triangles[i].centerOfMass)){
+            Triangulation.push_back(Triangles[i]);
+        }
+        if(N.isPointInside(Triangles[i].centerOfMass)){
+            Triangulation.push_back(Triangles[i]);
+        }
+    }
+    
+    return Triangulation;
 }

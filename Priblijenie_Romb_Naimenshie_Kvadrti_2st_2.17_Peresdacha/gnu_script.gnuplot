@@ -10,7 +10,7 @@ set key off
 set view equal xyz
 set xrange [-10:10]
 set yrange [-10:10]
-set zrange [-5: 5]
+set zrange [-5: 20]
 
 
 # Указываем наименования файлов для каждого набора данных

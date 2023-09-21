@@ -81,6 +81,7 @@ vector<Point> colorazePlus(vector<Point> Points){
     for(int i=0; i<Points.size(); i++){
         mid+=Points[i].z;
     }
+    
     mid=mid/Points.size();
     bool triger=true;
     int t=0;
@@ -99,7 +100,7 @@ vector<Point> colorazePlus(vector<Point> Points){
             
             double h1 = help.size();
             double h2 = Points.size();
-            if(h1/h2>0.97){
+            if(h1/h2>0.96){
                 triger=false;
                 colorPoints=help;
                 //ищем минимальный и максимальный элемент
